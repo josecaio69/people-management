@@ -4,18 +4,28 @@ import java.util.Date;
 
 public class PersonDto {
 
-    private String UId;
+    private String UID;
     private String firstName;
     private String lastName;
     private String cpf;
+    private String email;
     private Date birthData;
 
-    public String getUId() {
-        return UId;
+    public PersonDto(String UID, String firstName, String lastName, String cpf, String email, Date birthData) {
+        this.UID = UID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.cpf = cpf;
+        this.email = email;
+        this.birthData = birthData;
     }
 
-    public void setUId(String UId) {
-        this.UId = UId;
+    public String getUID() {
+        return UID;
+    }
+
+    public void setUID(String UID) {
+        this.UID = UID;
     }
 
     public String getFirstName() {
@@ -40,6 +50,14 @@ public class PersonDto {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Date getBirthData() {

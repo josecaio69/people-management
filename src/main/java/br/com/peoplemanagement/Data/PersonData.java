@@ -1,33 +1,30 @@
-package br.com.peoplemanagement.model;
+package br.com.peoplemanagement.Data;
 
-
-import javax.persistence.*;
 import java.util.Date;
-import java.util.UUID;
 
-@Entity
-public class Person {
+public class PersonData {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID", updatable = false, unique = true, nullable = false)
-    private UUID UID;
-    @Column(name = "FIRST_NAME")
+    private String UID;
     private String firstName;
-    @Column(name = "LAST_NAME")
     private String lastName;
-    @Column(name = "CPF")
     private String cpf;
-    @Column(name = "EMAIL")
     private String email;
-    @Column(name = "BIRTH_DATE")
     private Date birthData;
 
-    public UUID getUID() {
+    public PersonData(String UID, String firstName, String lastName, String cpf, String email, Date birthData) {
+        this.UID = UID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.cpf = cpf;
+        this.email = email;
+        this.birthData = birthData;
+    }
+
+    public String getUID() {
         return UID;
     }
 
-    public void setUID(UUID UID) {
+    public void setUID(String UID) {
         this.UID = UID;
     }
 
